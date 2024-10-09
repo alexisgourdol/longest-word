@@ -31,6 +31,13 @@ class TestGame:
             assert game.is_valid(test_word) == False
             assert game.grid == list(test_grid) # Make sure the grid remained untouched
 
+    def test_is_word_in_dict_true(self):
+            game = Game()
+            assert game.is_word_in_dict("tomato") == True
+    def test_is_word_in_dict_false(self):
+            game = Game()
+            assert game.is_word_in_dict("notomato") == False
+
     def test_word_is_valid(self):
         game = Game()
         test_grid = 'KWEUEAKRZ'
